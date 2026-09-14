@@ -1,0 +1,80 @@
+/* Universal Box-Sizing Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root Font Base */
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #f1f5f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Card Container */
+article.card {
+  max-width: 24rem; /* 24 * 16px = 384px */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: auto; /* Centers container */
+  margin-right: auto;
+  padding: 1.5rem;
+  text-align: center; /* Centers Text */
+  background-color: #ffffff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cbd5e1;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Primary image */
+article img {
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto 1rem;
+    border-radius: 2.1rem; /* Rounds the image without making it a circle */
+    object-fit: cover;
+}
+
+article h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+}
+
+article p.role {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+article p {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.5em;
+    margin-bottom: 1.5rem;
+}
+
+/* Call-To-Action Button Link */
+article a {
+  display: block; /* Fills 100% width in Normal Flow */
+  width: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 0.375rem;
+}
