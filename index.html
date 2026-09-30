@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-        <title></title>
-    </head>
-    <body>
-        <article class="card">
-            <img src="avatar.jpg" alt="Avatar for Ryan">
-            <h2>Ryan Hutto</h2>
-            <p class="role">Student and Founder of StreamHuts</p>
-            <p>
-                I am the founder of StreamHuts, LLC. which is a company that helps churches set up a way to allow anyone to listen to music the church creates, or performs, on a radio station style webpage.
-            </p>
-            <a href="#">Connect</a>
-        </article>
-    </body>
+<!--
+    Persona: Maya Chen, 27 - cosplayer who 3D prints armor and props.
+    "I need it to survive the con floor, not just look printed."
+    Her frustrations (bad sizing, cracking prints, long finishing, untrusted files)
+    are answered on each card: sizing, durability rating, finish time, verified maker.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge &amp; Filament</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Forge &amp; Filament</a>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html#library">Library</a></li>
+                <li><a href="index.html#materials">Materials</a></li>
+                <li><a href="index.html#guides">Guides</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="library">
+            <h1>Cosplay Armor Files</h1>
+            <p>Files that scale to your measurements and last a full convention day.</p>
+
+            <div>
+                <article>
+                    <h2>Knight Pauldron</h2>
+                    <p>Shoulder armor that scales to your shoulder width.</p>
+                    <p>Durability: 9/10 · ~6 hr finishing · Verified</p>
+                    <a href="details.html">View File</a>
+                </article>
+                <article>
+                    <h2>Sci-Fi Chest Plate</h2>
+                    <p>Split into 6 parts to fit small printers.</p>
+                    <p>Durability: 8/10 · ~10 hr finishing · Verified</p>
+                    <a href="details.html">View File</a>
+                </article>
+                <article>
+                    <h2>Elven Bracers</h2>
+                    <p>Forearm guards sized to your wrist.</p>
+                    <p>Durability: 7/10 · ~4 hr finishing · Verified</p>
+                    <a href="details.html">View File</a>
+                </article>
+            </div>
+        </section>
+
+        <aside id="materials">
+            <h2>Material Tips</h2>
+            <p><strong>PETG</strong> for wearable armor. It bends instead of cracking.</p>
+            <p><strong>PLA+</strong> for props. It sands and paints easily.</p>
+        </aside>
+    </main>
+
+    <footer id="guides">
+        <p>IMED 1341 Lab 2 · Ryan Hutto</p>
+    </footer>
+</body>
 </html>

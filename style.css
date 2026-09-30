@@ -1,80 +1,154 @@
-/* Universal Box-Sizing Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Root Font Base */
-html {
-  font-size: 100%;
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: #f1f5f9;
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #fafaf9;
+    color: #1c1917;
+    line-height: 1.5;
 }
 
-/* Main Card Container */
-article.card {
-  max-width: 24rem; /* 24 * 16px = 384px */
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  margin-left: auto; /* Centers container */
-  margin-right: auto;
-  padding: 1.5rem;
-  text-align: center; /* Centers Text */
-  background-color: #ffffff;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cbd5e1;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+/* Header and logo */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #1c1917;
 }
 
-/* Primary image */
-article img {
+header > a {
     display: block;
-    width: 6rem;
-    height: 6rem;
-    margin: 0 auto 1rem;
-    border-radius: 2.1rem; /* Rounds the image without making it a circle */
-    object-fit: cover;
-}
-
-article h2 {
+    padding: 0.5rem 0;        /* big click target (Fitts's Law) */
+    color: #ffffff;
     font-size: 1.5rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.25rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-article p.role {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-bottom: 1.5rem;
+/* Main navigation (Flexbox) */
+header nav ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
 }
 
-article p {
-    font-size: 1rem;
-    color: #374151;
-    line-height: 1.5em;
-    margin-bottom: 1.5rem;
+header nav a {
+    display: block;
+    padding: 0.75rem 1rem;   /* big click target (Fitts's Law) */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0.25rem;
 }
 
-/* Call-To-Action Button Link */
-article a {
-  display: block; /* Fills 100% width in Normal Flow */
-  width: 100%;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  background-color: #1e3a8a;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9375rem;
-  border-radius: 0.375rem;
+header nav a:hover {
+    background-color: #44403c;
+}
+
+/* Active page ("you are here") */
+header nav a.active {
+    background-color: #c2410c;
+}
+
+/* Keyboard focus */
+a:focus {
+    outline: 0.2rem solid #f59e0b;
+    outline-offset: 0.2rem;
+}
+
+/* Page layout (Grid): content + sidebar */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+main p {
+    margin-bottom: 1rem;
+}
+
+/* Card grid (Grid) */
+main section div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+main article {
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 0.0625rem solid #d6d3d1;
+    border-radius: 0.5rem;
+}
+
+main article h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+main article ul {
+    margin: 0 0 1.5rem 1.5rem;
+}
+
+/* Buttons inside cards */
+main article a {
+    display: block;
+    padding: 0.75rem;         /* big click target (Fitts's Law) */
+    background-color: #9a3412;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.25rem;
+}
+
+main article a:hover {
+    background-color: #7c2d12;
+}
+
+/* Sidebar */
+main aside {
+    padding: 1.5rem;
+    background-color: #fff7ed;
+    border-radius: 0.5rem;
+}
+
+main aside h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+main aside ol {
+    margin-left: 1.5rem;
+}
+
+/* Breadcrumbs */
+main nav {
+    grid-column: 1 / -1;      /* stretch across the full width */
+}
+
+main nav a {
+    display: inline-block;
+    padding: 0.75rem 0.25rem;
+    color: #9a3412;
+}
+
+/* Footer */
+footer {
+    padding: 1.5rem;
+    background-color: #1c1917;
+    color: #d6d3d1;
+    text-align: center;
 }
